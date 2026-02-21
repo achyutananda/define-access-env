@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: windows Step power shell 
         run: |
-          echo "Build No. is $Env.BUILD_NUMBER"
+          echo "Build No. is ${Env.BUILD_NUMBER}"
       - name: Ubuntu Step Yml
         run: |
           echo "Build No. is ${{env.BUILD_NUMBER}}"
