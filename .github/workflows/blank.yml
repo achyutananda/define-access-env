@@ -1,0 +1,24 @@
+name: EnvExample
+on: push
+env:
+  BUILD_NUMBER: "1.1"
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ubuntu Step Shell 
+        run: |
+          echo "Build No. is $BUILD_NUMBER"
+      - name: Ubuntu Step Yml
+        run: |
+          echo "Build No. is ${{env.BUILD_NUMBER}}"
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: windows Step power shell 
+        run: |
+          echo "Build No. is $Env.BUILD_NUMBER"
+      - name: Ubuntu Step Yml
+        run: |
+          echo "Build No. is ${{env.BUILD_NUMBER}}"
+  
